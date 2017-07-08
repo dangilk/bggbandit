@@ -4,15 +4,14 @@ import {
   Text,
   View
 } from 'react-native';
+import {connect} from 'react-redux';
+import GameCarousel from './GameCarousel';
 
 export default class Home extends Component {
-  static navigationOptions = {
-    title: 'Your Suggestions',
-  };
   render() {
         return (
             <View>
-              <Text>Wow this is the home page</Text>
+              <GameCarousel/>
             </View>
         );
     }
