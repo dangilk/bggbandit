@@ -6,12 +6,12 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 import GameCarousel from './GameCarousel';
-import {setGameSuggestions} from '../actions/actions'
+import {fetchGameSuggestions} from '../actions/actions'
 import {GAME_SAMPLES} from '../static/games';
 
 class Home extends Component {
   componentDidMount() {
-    this.props.setGames(GAME_SAMPLES);
+    this.props.fetchGames('ntgarthunk');
   }
   render() {
         return (
@@ -29,7 +29,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        setGames: (games) => dispatch(setGameSuggestions(games))
+        fetchGames: (username) => dispatch(fetchGameSuggestions(username))
     };
 };
 

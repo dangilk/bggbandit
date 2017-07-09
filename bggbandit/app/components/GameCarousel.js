@@ -7,7 +7,6 @@ import {
 import {connect} from 'react-redux';
 import Carousel from 'react-native-snap-carousel';
 import GameCarouselItem from './GameCarouselItem';
-import {GAME_SAMPLES} from '../static/games';
 import styles from '../styles/index.style';
 import { sliderWidth, itemWidth } from '../styles/SliderEntry';
 import gameSuggestions from '../actions/actions'
