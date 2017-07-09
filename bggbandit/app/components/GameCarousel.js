@@ -10,10 +10,11 @@ import GameCarouselItem from './GameCarouselItem';
 import {GAME_SAMPLES} from '../static/games';
 import styles from '../styles/index.style';
 import { sliderWidth, itemWidth } from '../styles/SliderEntry';
+import gameSuggestions from '../actions/actions'
 
-export default class GameCarousel extends Component {
+class GameCarousel extends Component {
   render () {
-    const items = GAME_SAMPLES.map((entry, index) =>
+     items = this.props.games.map((entry, index) =>
             <GameCarouselItem
               key={`carousel-entry-${index}`}
               even={(index + 1) % 2 === 0}
@@ -36,13 +37,15 @@ export default class GameCarousel extends Component {
             snapOnAndroid={true}
             removeClippedSubviews={false}
             >
-                {/* <GameCarouselItem
-                  key={`carousel-entry-${0}`}
-                  even={(0 + 1) % 2 === 0}
-                  {...GAME_SAMPLES[0]}
-                /> */}
                 {items}
             </Carousel>
         );
     }
 }
+const mapStateToProps = (state) => {
+  console.log(state)
+    return {
+      games: state.gameSuggestions.games
+    };
+};
+export default connect(mapStateToProps)(GameCarousel);
