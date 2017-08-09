@@ -42,7 +42,6 @@ class GameCarousel extends Component {
     }
 }
 const mapStateToProps = (state) => {
-  console.log(state)
     return {
       games: state.gameSuggestions.games
     };
