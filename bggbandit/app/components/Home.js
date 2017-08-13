@@ -7,7 +7,6 @@ import {
 import {connect} from 'react-redux';
 import GameCarousel from './GameCarousel';
 import {fetchGameSuggestions} from '../actions/actions'
-import {GAME_SAMPLES} from '../static/games';
 
 class Home extends Component {
   componentDidMount() {
@@ -15,7 +14,11 @@ class Home extends Component {
   }
   render() {
         return (
-            <View>
+            <View style={{
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center'
+      }}>
               <GameCarousel/>
             </View>
         );

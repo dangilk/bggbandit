@@ -24,16 +24,16 @@ class GameCarousel extends Component {
           <Carousel
             sliderWidth={sliderWidth}
             itemWidth={itemWidth}
-            inactiveSlideScale={1}
+            inactiveSlideScale={0.9}
             inactiveSlideOpacity={1}
             enableMomentum={true}
             autoplay={true}
             autoplayDelay={500}
-            autoplayInterval={2500}
+            autoplayInterval={10000}
             containerCustomStyle={styles.slider}
             contentContainerCustomStyle={styles.sliderContainer}
             showsHorizontalScrollIndicator={false}
-            snapOnAndroid={true}
+            snapOnAndroid={false}
             removeClippedSubviews={false}
             >
                 {items}
